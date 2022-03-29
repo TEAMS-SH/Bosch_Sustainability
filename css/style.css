@@ -1,12 +1,19 @@
 body{
     margin: 0;
-  
+    background-color: black;
 }
 .strip{
-    width: 100%;
-    z-index: 4;
-    top: 0;
-    grid-column: 1/4;
+        position: fixed;
+            width: 100%;
+            background-color: none;
+            overflow: hidden;
+          align-items: center;
+          justify-content: center;
+            z-index: 100;
+            left: 0;
+            right: 0;
+            
+        
 }
 .container{
     height: 100vh;
@@ -15,7 +22,7 @@ body{
     grid-template-rows: 1fr 0.5fr 1fr 1fr;
 }
 
-#v_main {
+.vid1, .vid2 {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -23,6 +30,9 @@ body{
     width: 100%; 
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+    transform: scale(1.0);
 }
 .timeleft{
     grid-column: 2/3;
@@ -90,4 +100,14 @@ body{
     justify-content: center;
     font-size: 2rem;
     color: rgba(253, 253, 253, 0.3);
+}
+
+.fp-viewing-p1 .vid1{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fp-viewing-p2 .vid2{
+    opacity:1;
+    transform: scale(1);
 }
