@@ -10,7 +10,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fullpage.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
@@ -19,11 +20,16 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <div id="fullpage">
         <video id="v_main" autoplay loop>
             <source src="video/shutterstock_1074810836.mov" type="video/mp4">
         </video>
+        
         <div class="container">
-            
+            <img src="img/bosch_strip.svg" alt="" class="strip">
+            <div class="timeleft">
+                Time left to limit global warming to 1.5°
+            </div>
             <div id="countdown">
                 <div class="years">
                     <div id="years" class="cd_digit"></div>
@@ -49,8 +55,86 @@
 
             </div>
         </div>
-        
-        <script src="./index.js"></script>
+    </div>
+        <script src="js/index.js"></script>
+        <script type="text/javascript" src="js/fullpage.min.js"></script>
+        <script>
+            var myFullpage = new fullpage('#fullpage', {
+                //Navigation
+                menu: '#menu',
+                lockAnchors: true,
+                anchors: ['p1', 'p2', 'p3', 'p4', 'p5','p6'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Project1', 'Project2', 'Project3', 'Project4'],
+                showActiveTooltip: false,
+                slidesNavigation: false,
+                slidesNavPosition: 'bottom',
+    
+                //Scrolling
+                css3: true,
+                scrollingSpeed: 700,
+                autoScrolling: true,
+                fitToSection: true,
+                fitToSectionDelay: 600,
+                scrollBar: false,
+                easing: 'easeInOutCubic',
+                easingcss3: 'ease',
+                loopBottom: false,
+                loopTop: false,
+                loopHorizontal: true,
+                continuousVertical: false,
+                continuousHorizontal: false,
+                scrollHorizontally: false,
+                interlockedSlides: false,
+                dragAndMove: false,
+                offsetSections: false,
+                resetSliders: false,
+                fadingEffect: false,
+                normalScrollElements: '#element1, .element2',
+                scrollOverflow: false,
+                scrollOverflowReset: false,
+                scrollOverflowOptions: null,
+                touchSensitivity: 6,
+                normalScrollElementTouchThreshold: 3,
+                bigSectionsDestination: null,
+    
+                //Accessibility
+                keyboardScrolling: true,
+                animateAnchor: true,
+                recordHistory: false,
+    
+                //Design
+                controlArrows: true,
+                verticalCentered: true,
+                sectionsColor: [],
+                fixedElements: '#header, .footer',
+                responsiveWidth: 0,
+                responsiveHeight: 0,
+                responsiveSlides: false,
+                parallax: false,
+                parallaxOptions: {
+                    type: 'reveal',
+                    percentage: 62,
+                    property: 'translate'
+                },
+    
+                //Custom selectors
+                sectionSelector: '.section',
+                slideSelector: '.slide',
+    
+                lazyLoading: true,
+    
+                //events
+                onLeave: function(origin, destination, direction) {},
+                afterLoad: function(origin, destination, direction) {},
+                afterRender: function() {},
+                afterResize: function(width, height) {},
+                afterResponsive: function(isResponsive) {},
+                afterSlideLoad: function(section, origin, destination, direction) {},
+                onSlideLeave: function(section, origin, destination, direction) {}
+            });
+        </script>
     </body>
     
 </html>
