@@ -6,7 +6,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 #v_main {
@@ -24,33 +24,54 @@ body{
     grid-column: 2/3;
     grid-row: 2/2;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1.3fr 1fr 1fr 1fr;
+}
+.cd_digit{
+    display: flex;
+    justify-content: center;
 }
 .years{
     grid-column: 1;
-    display: flex;
-    flex-direction: row;
     font-size: 8rem;
     font-family: 'Oswald', sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .days{
     grid-column: 2;
     font-size: 8rem;
     font-family: 'Oswald', sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
+
 .hours{
     grid-column: 3;
     font-size: 8rem;
     font-family: 'Oswald', sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
+
 .minutes{
     grid-column: 4;
     font-size: 8rem;
     font-family: 'Oswald', sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
+
 .seconds{
     grid-column: 5;
     font-size: 8rem;
     font-family: 'Oswald', sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.cd_tag{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
 }
